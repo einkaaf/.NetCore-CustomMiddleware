@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<CustomMiddleware.Models.Entity.Person>;
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+        </tr>
+    </thead>
+    @foreach (var person in Model)
+    {
+        <tbody>
+            <tr>
+                <th scope="row">@person.Id</th>
+                <td>@person.Name</td>
+                <td>@person.Family</td>
+            </tr>
+        </tbody>
+    }
+
+
+</table>
